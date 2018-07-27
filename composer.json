@@ -1,7 +1,10 @@
 {
   "require":
   {
-    "php": ">=7.1.0",
+    "php": ">=7.2.8",
+    "ext-gd": "*",
+    "ext-apcu": "*",
+    "ext-mbstring": "*",
     "ext-pcntl": "*"
   }
   ,
