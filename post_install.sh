@@ -4,13 +4,13 @@ set -x
 
 date
 
-tar xf phpPgAdmin-5.1.tar.bz2
+# ***** phppgadmin *****
 
-mv phpPgAdmin-5.1 www/phppgadmin
-
-rm -f phpPgAdmin-5.1.tar.bz2
-
-cp config.inc.php www/phppgadmin/conf/config.inc.php
+pushd www
+git clone --depth 1 https://github.com/phppgadmin/phppgadmin.git phppgadmin
+cp ../config.inc.php phppgadmin/conf/
+cp ../Connection.php phppgadmin/classes/database/
+popd
 
 chmod 755 ./start_web.sh
 
