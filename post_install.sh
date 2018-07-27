@@ -18,15 +18,14 @@ echo ${postgres_dbname}
 
 export PGPASSWORD=${postgres_password}
 
-#psql -U ${postgres_user} -d ${postgres_dbname} -h ${postgres_server} > /tmp/sql_result.txt << __HEREDOC__
-#CREATE TABLE t_pattern (
-# pattern_id int primary key
-#,preg_match_pattern character varying(255) NOT NULL
-#,preg_replace_pattern character varying(255)
-#,replacement character varying(255)
-#);
-#__HEREDOC__
-#cat /tmp/sql_result.txt
+psql -U ${postgres_user} -d ${postgres_dbname} -h ${postgres_server} > /tmp/sql_result.txt << __HEREDOC__
+CREATE TABLE t_urls (
+ url1 character varying(512) primary key
+,url2 character varying(512) primary key
+,create_time timestamp DEFAULT localtimestamp NOT NULL
+);
+__HEREDOC__
+cat /tmp/sql_result.txt
 
 # ***** phppgadmin *****
 
