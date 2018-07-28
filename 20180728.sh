@@ -2,16 +2,16 @@
 
 set -x
 
-flag='ON'
+n=0
 url=${URL01}
 while read -r LINE
 do
-  if [ $flag = 'ON' ]; then
-    curl -u ${U1}:${P1} ${URL01}${LINE}/ &
-    flag='OFF'
-  else
-    curl -u ${U1}:${P1} ${URL01}${LINE}/
-    flag='ON'
+  if [ n -eq 0 ] then
     wait
   fi
+  curl -u ${U1}:${P1} ${URL01}${LINE}/ &
+  $((n+=1))
+  $((n%=4))
 done < /tmp/data.txt
+
+wait
