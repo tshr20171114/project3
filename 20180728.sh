@@ -6,7 +6,7 @@ n=0
 url=${URL01}
 while read -r LINE
 do
-  if [ n -eq 0 ] then
+  if [ n -eq 0 ]; then
     wait
   fi
   curl -u ${U1}:${P1} ${URL01}${LINE}/ &
