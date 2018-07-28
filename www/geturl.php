@@ -21,7 +21,7 @@ $statement = $pdo->prepare($sql);
 $statement->execute([':b_url1' => $url ]);
 $result = $statement->fetch();
 if ($result !== FALSE) {
-  echo $result['url2']);
+  echo $result['url2'];
   $pdo = null;
   exit;
 }
