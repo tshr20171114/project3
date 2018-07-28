@@ -10,8 +10,8 @@ do
     wait
   fi
   curl -u ${U1}:${P1} ${URL01}${LINE}/ &
-  $((n+=1))
-  $((n%=4))
+  echo $((n+=1))
+  echo $((n%=4))
 done < /tmp/data.txt
 
 wait
