@@ -21,7 +21,7 @@ export PGPASSWORD=${postgres_password}
 psql -U ${postgres_user} -d ${postgres_dbname} -h ${postgres_server} > /tmp/sql_result.txt << __HEREDOC__
 CREATE TABLE t_urls (
  url1 character varying(512) primary key
-,url2 character varying(512) primary key
+,url2 character varying(512)
 ,create_time timestamp DEFAULT localtimestamp NOT NULL
 );
 __HEREDOC__
