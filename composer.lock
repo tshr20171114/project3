@@ -59,7 +59,10 @@
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.1.0",
-        "ext-pcntl": "*"
+        "ext-pcntl": "*",
+        "ext-gd": "*",
+        "ext-apcu": "*",
+        "ext-mbstring": "*"
     },
     "platform-dev": []
 }
