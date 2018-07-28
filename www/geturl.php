@@ -41,18 +41,21 @@ error_log("${pid} ${url2}");
 $res = get_contents($url2);
 
 $url3 = 'none';
-for ($i = 0; $i < 2; $i++) {
+for ($i = 0; $i < 3; $i++) {
   if ($i == 0) {
      $pattern = explode(',', getenv('LINK_PATTERN1'));
-  } else {
+  } elseif ($i == 1) {
      $pattern = explode(',', getenv('LINK_PATTERN2'));
+  } else {
+     $pattern = explode(',', getenv('LINK_PATTERN3'));
   }
   $rc = preg_match('/' . $pattern[0] . '/', $res, $matches);
   if ($rc != 1) {
     continue;
   }
-  error_log("${pid} " . $matches[1]);
-  $url3 = str_replace($pattern[1], $matches[1], $pattern[2]);
+  $replace = end($matches);
+  error_log("${pid} " . $replace);
+  $url3 = str_replace($pattern[1], $replace, $pattern[2]);
   error_log("${pid} ${url3}");
 }
 
