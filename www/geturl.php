@@ -21,6 +21,7 @@ $statement = $pdo->prepare($sql);
 $statement->execute([':b_url1' => $url ]);
 $result = $statement->fetch();
 if ($result !== FALSE) {
+  error_log("${pid} DB HIT");
   echo $result['url2'];
   $pdo = null;
   exit;
