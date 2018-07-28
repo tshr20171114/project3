@@ -1,24 +1,24 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa739a2ead1c447828a7a9d13d4dbf95",
+    "content-hash": "29e608204f99677e11a91a9218cb9efa",
     "packages": [],
     "packages-dev": [
         {
             "name": "heroku/heroku-buildpack-php",
-            "version": "v126",
+            "version": "v139",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "8288ddb4b717019f5e39db384e3a9a5b41d73e93"
+                "reference": "565e494409c890054e10d0fb46c00ee032137a7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/8288ddb4b717019f5e39db384e3a9a5b41d73e93",
-                "reference": "8288ddb4b717019f5e39db384e3a9a5b41d73e93",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/565e494409c890054e10d0fb46c00ee032137a7d",
+                "reference": "565e494409c890054e10d0fb46c00ee032137a7d",
                 "shasum": ""
             },
             "bin": [
@@ -49,7 +49,7 @@
                 "nginx",
                 "php"
             ],
-            "time": "2017-10-28T00:17:41+00:00"
+            "time": "2018-07-20T16:31:01+00:00"
         }
     ],
     "aliases": [],
@@ -58,11 +58,11 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1.0",
-        "ext-pcntl": "*",
+        "php": ">=7.2.8",
         "ext-gd": "*",
         "ext-apcu": "*",
-        "ext-mbstring": "*"
+        "ext-mbstring": "*",
+        "ext-pcntl": "*"
     },
     "platform-dev": []
 }
